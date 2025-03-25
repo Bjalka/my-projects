@@ -15,7 +15,7 @@ public class DatabazePojistencu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in); // Inicializace Scanneru pro čtení vstupu od uživatele
         Databaze databaze = new Databaze(); // Inicializace Databaze pro správu pojištěnců
-        DatabazeProPojistovnu.UzivatelskeRozhrani rozhrani = new DatabazeProPojistovnu.UzivatelskeRozhrani(scanner, databaze); // Propojení databáze a rozhraní
+        UzivatelskeRozhrani rozhrani = new UzivatelskeRozhrani(scanner, databaze); // Propojení databáze a rozhraní
 
         System.out.println("\nVítejte v databázi pojištěnců. Zadejte volbu:");
 
