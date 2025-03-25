@@ -10,7 +10,7 @@ import java.util.List;
 public class Databaze {
 
     // Deklarace proměnné pojistenci typu List, jehož položky budou objekty třídy Pojistenec
-    final List<Pojistenec> pojistenci;
+    final List<DatabazeProPojistovnu.Pojistenec> pojistenci;
 
     /**
      * Bezparametrický konstruktor třídy Databaze, který inicializuje prázdný seznam pojištěnců.
@@ -23,7 +23,7 @@ public class Databaze {
      * Metoda přidávající pojištěnce do seznamu (databáze).
      * @param pojistenec Předtsavuje pojištěnce, který bude přidán do seznamu
      */
-    public void pridejPojistence(Pojistenec pojistenec) {
+    public void pridejPojistence(DatabazeProPojistovnu.Pojistenec pojistenec) {
         this.pojistenci.add(pojistenec);
     }
 
@@ -31,7 +31,7 @@ public class Databaze {
      * Metoda vracející seznam všech pojištěnců uložených v databázi
      * @return Vrací seznam všech pojištěnců
      */
-    public List<Pojistenec> vratVsechnyPojistence() {
+    public List<DatabazeProPojistovnu.Pojistenec> vratVsechnyPojistence() {
         return this.pojistenci;
     }
 
@@ -43,9 +43,9 @@ public class Databaze {
      * @param prijmeni Představuje příjmení pojištěnce
      * @return Vrací daného pojištěnce, byl-li nalezen. Jinak vrací null
      */
-    public Pojistenec vyhledejPojistence(String jmeno, String prijmeni) {
+    public DatabazeProPojistovnu.Pojistenec vyhledejPojistence(String jmeno, String prijmeni) {
         // Průchod kolekcí (seznamem) pojištěnců s cílem nalézt shodu podle jména a příjmení
-        for (Pojistenec pojistenec : pojistenci) {
+        for (DatabazeProPojistovnu.Pojistenec pojistenec : pojistenci) {
             // Pokud se jméno i příjmení shodují, vracíme daného pojištěnce
             if (pojistenec.ziskejJmeno().equalsIgnoreCase(jmeno) && pojistenec.ziskejPrijmeni().equalsIgnoreCase(prijmeni)) {
                 return pojistenec;
